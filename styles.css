@@ -77,7 +77,7 @@ a {
 
 .top-nav {
   display: grid;
-  grid-template-columns: minmax(260px, 1fr) auto;
+  grid-template-columns: minmax(360px, 0.95fr) minmax(0, 1.05fr);
   align-items: stretch;
   gap: 0;
   padding: 18px 22px 0;
@@ -91,43 +91,46 @@ a {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-  height: 78px;
+  height: 64px;
   background: var(--charcoal);
   z-index: -1;
 }
 
 .brand {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.08rem;
   font-weight: 800;
   text-decoration: none;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: #ffffff;
-  padding: 22px 0 22px 8px;
+  padding: 18px 0 18px 8px;
+  max-width: 280px;
 }
 
 .nav-links {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  justify-content: end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   align-self: start;
+  gap: 0;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 0.98rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  min-height: 78px;
+  min-height: 46px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 24px;
+  padding: 0 12px;
   background: var(--red);
   border-left: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .nav-links a:nth-child(2n) {
@@ -166,10 +169,10 @@ a {
 }
 
 .hero-copy h1 {
-  font-size: clamp(2.7rem, 5vw, 4.8rem);
-  line-height: 0.9;
+  font-size: clamp(2rem, 3.4vw, 3.1rem);
+  line-height: 0.96;
   margin: 0 0 18px;
-  max-width: 11ch;
+  max-width: 16ch;
   color: var(--red);
   text-transform: uppercase;
 }
@@ -566,14 +569,6 @@ strong {
   }
 
   .nav-links {
-    grid-template-columns: repeat(2, minmax(0, auto));
-  }
-
-  .official-actions {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-links {
     justify-content: flex-start;
   }
 
@@ -607,13 +602,17 @@ strong {
   }
 
   .nav-links {
-    grid-template-columns: 1fr 1fr;
+    justify-content: flex-start;
   }
 
   .nav-links a {
-    min-height: 58px;
+    min-height: 42px;
     padding: 0 12px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .official-actions {
+    grid-template-columns: 1fr;
   }
 
   .hero-panel {
