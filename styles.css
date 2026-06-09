@@ -372,6 +372,25 @@ tbody tr:last-child td {
   margin-top: 10px;
 }
 
+.section-links {
+  background: var(--paper-strong);
+}
+
+.inline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.subpage-hero .hero-grid {
+  grid-template-columns: 1fr;
+}
+
+.subpage-hero .hero-copy h1 {
+  max-width: 16ch;
+}
+
 #documents .three-up {
   grid-template-columns: 1.1fr 0.95fr 0.95fr;
 }
