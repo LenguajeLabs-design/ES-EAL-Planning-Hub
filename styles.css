@@ -110,11 +110,11 @@ a {
 }
 
 .nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(132px, 1fr));
   align-self: start;
   gap: 0;
+  justify-content: end;
 }
 
 .nav-links a {
@@ -134,6 +134,31 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
+.sub-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  padding: 12px 22px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.sub-nav a {
+  text-decoration: none;
+  color: var(--navy);
+  font-size: 0.83rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.sub-nav a:hover,
+.sub-nav a:focus-visible {
+  border-bottom-color: var(--red);
+}
+
 .nav-links a:nth-child(2n) {
   background: var(--red-deep);
 }
@@ -148,7 +173,7 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.86fr);
   gap: 26px;
-  padding: 62px 22px 26px;
+  padding: 40px 22px 26px;
   align-items: start;
   position: relative;
   z-index: 1;
@@ -574,7 +599,13 @@ strong {
   }
 
   .nav-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-content: flex-start;
+  }
+
+  .sub-nav {
+    padding-left: 14px;
+    padding-right: 14px;
   }
 
   .intro .card-grid article:last-child,
@@ -607,7 +638,12 @@ strong {
   }
 
   .nav-links {
+    grid-template-columns: 1fr 1fr;
     justify-content: flex-start;
+  }
+
+  .sub-nav {
+    gap: 8px 14px;
   }
 
   .nav-links a {
