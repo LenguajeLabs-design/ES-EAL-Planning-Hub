@@ -327,7 +327,7 @@ th {
   border-left: 0;
   background: var(--navy);
   color: #ffffff;
-  margin-top: 120px;
+  margin-top: 0;
 }
 
 .hero-list {
@@ -354,8 +354,8 @@ main {
 
 .section-heading {
   display: grid;
-  grid-template-columns: 190px minmax(0, 1fr);
-  gap: 16px;
+  grid-template-columns: 1fr;
+  gap: 8px;
   align-items: start;
   margin-bottom: 18px;
   padding-top: 0;
@@ -369,7 +369,7 @@ main {
 }
 
 .section-heading p:first-child {
-  margin-top: 12px;
+  margin-top: 0;
 }
 
 .card-grid,
@@ -389,17 +389,17 @@ main {
 }
 
 .pathway-grid {
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 12px;
 }
 
 .timeline {
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 12px;
 }
 
 .routine-grid {
-  grid-template-columns: 1.25fr 0.9fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .intro .card-grid article:first-child,
@@ -423,18 +423,6 @@ main {
 .can-do-grid article:first-child p,
 .can-do-grid article:first-child li {
   color: #ffffff;
-}
-
-.intro .card-grid article:last-child,
-#grade-bands .card-grid article:last-child,
-#pathways .card-grid article:last-child,
-.can-do-grid article:last-child {
-  margin-top: 24px;
-}
-
-.timeline-card:nth-child(2),
-.timeline-card:nth-child(4) {
-  margin-top: 20px;
 }
 
 .routine-grid .routine-card:first-child {
