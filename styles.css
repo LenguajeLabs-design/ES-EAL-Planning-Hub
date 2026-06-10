@@ -109,6 +109,31 @@ a {
   white-space: normal;
 }
 
+.brand-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-sub {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding-left: 8px;
+  margin-top: -8px;
+  opacity: 0.78;
+}
+
+.brand-sub:hover,
+.brand-sub:focus-visible {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .nav-links {
   display: grid;
   grid-template-columns: repeat(4, minmax(132px, 1fr));
@@ -554,6 +579,38 @@ tbody tr:last-child td {
 .official-actions a:hover,
 .official-actions a:focus-visible {
   background: #1b3972;
+}
+
+.useful-links {
+  padding: 28px 0 12px;
+}
+
+.useful-links h2 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin: 0 0 12px;
+}
+
+.useful-links-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+}
+
+.useful-links-grid a {
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 3px;
+}
+
+.useful-links-grid a:hover,
+.useful-links-grid a:focus-visible {
+  border-bottom-color: var(--red);
 }
 
 #documents .three-up {
